@@ -553,7 +553,7 @@ span.p-small {
 }
 
 .skills p {
-	font-size: 14px;
+	font-size: 16px;
 	text-transform: uppercase;
 	margin: 0;
 	line-height: 18px;
@@ -653,8 +653,8 @@ p.t-type {
 
 .contact-form p {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 14px;
-	color: #fff;
+	font-size: 16px;
+	color: #f9f9f9;
 	text-transform: uppercase;
 	margin-bottom: 2px;
 }

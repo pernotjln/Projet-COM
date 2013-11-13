@@ -3,6 +3,7 @@
 }
 .cfg-contactform {
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .ui-datepicker{
@@ -84,15 +85,15 @@
 	font-weight: normal;
 	font-style: normal;
 	font-size: 18px;
-	color: #fff;
+	color: #f9f9f9;
 }
 
 .cfg-element-content input[type="text"], .cfg-element-content textarea, .cfg-element-content select, .cfg-option-content {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	font-size: 13px;
-	color: #fff;
+	font-size: 16px;
+	color: #f9f9f9;
 }
 
 .cfg-element-content input[type="text"], .cfg-element-content textarea {
@@ -104,8 +105,8 @@
 
 #cfg-element-4-37-label {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 14px;
-	color: #fff;
+	font-size: 16px;
+	color: #f9f9f9;
 	text-transform: uppercase;
 }
 
@@ -115,8 +116,8 @@
 
 #cfg-element-4-34-label {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 14px;
-	color: #fff;
+	font-size: 16px;
+	color: #f9f9f9;
 	text-transform: uppercase;
 }
 
@@ -126,8 +127,8 @@
 
 #cfg-element-4-35-label {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 14px;
-	color: #fff;
+	font-size: 16px;
+	color: #f9f9f9;
 	text-transform: uppercase;}
 
 #cfg-element-4-35 {
@@ -151,11 +152,14 @@
 }
 
 .cfg-validationmessage {
-	color: #fff;
-	padding: 5px 7px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	color: green;
+	text-align: center;
 }
 
 .cfg-errormessage{
-	color:#fff;
-	padding:5px 7px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	color: #911;
 }

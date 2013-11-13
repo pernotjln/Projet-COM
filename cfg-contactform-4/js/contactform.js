@@ -184,7 +184,7 @@ jQuery(function(){
 					
 					data = jQuery.trim(data);
 					
-					// 	console.log(data);
+					//console.log(data);
 					
 					response = jQuery.parseJSON(data);
 						
@@ -205,9 +205,7 @@ jQuery(function(){
 									jQuery(this).slideUp('fast');
 								}
 							});
-							
-							jQuery('html, body').animate({scrollTop:formcontainer.offset().top}, 'fast');
-							
+
 							formcontainer.find('.cfg-contactform-content').append(validation_message);
 						}
 							
@@ -221,10 +219,6 @@ jQuery(function(){
 
 							jQuery('<div class="cfg-errormessage">'+response['message'][i]['errormessage']+'</div>').prependTo(optioncontainer).fadeIn();
 						}						
-						
-						// scrolls to the first error message
-						jQuery('html,body').animate({scrollTop: jQuery('#'+response['message'][0]['elementlabel_id']).offset().top},'fast'); 	
-						
 					}
 				} /* end function data */
 			); /* end jQuery.post */
