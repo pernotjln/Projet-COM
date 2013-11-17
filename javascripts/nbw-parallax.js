@@ -84,7 +84,7 @@ $(document).ready(function() { //when the document is ready...
 			//call the newPos function and change the background position
 			$thirdBG.css({'backgroundPosition': newPos(0, windowHeight, pos, 2550, 0)});
 			//$secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1550, 0.3)});
-			bg3.css({'backgroundPosition': newPos(50, windowHeight, pos, 5410, 0.3)});
+			bg3.css({'backgroundPosition': newPos(50, windowHeight, pos, 5810, 0.3)});
 			//call the newPos function and change the second background position
 		}
 		
@@ -93,7 +93,7 @@ $(document).ready(function() { //when the document is ready...
 			$fourthBG.css({'backgroundPosition': newPos(0, windowHeight, pos, 5850, 0)});
 			//$secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1550, 0.3)});
 			//call the newPos function and change the second background position
-			bg4.css({'backgroundPosition': newPos(50, windowHeight, pos, 6610, 0.3)});
+			bg4.css({'backgroundPosition': newPos(50, windowHeight, pos, 8110, 0.3)});
 		}
 		
 		$('#pixels').html(pos); //display the number of pixels scrolled at the bottom of the page
