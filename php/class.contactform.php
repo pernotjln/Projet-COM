@@ -95,7 +95,6 @@ class contactForm{
 		$form_url_exp = explode('/', $form_url);
 		
 		
-		// remove contactform/inc/form-validation.php
 		$pattern_slash = $form_url_exp[count($form_url_exp)-3].'/'.$form_url_exp[count($form_url_exp)-2].'/'.$form_url_exp[count($form_url_exp)-1];
 		
 		$form_url = str_replace($pattern_slash, '', $form_url);
