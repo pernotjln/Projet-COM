@@ -6,18 +6,18 @@
 <head>
 
 	<!-- Basic Page Needs
-  ================================================== -->
+	================================================== -->
 	<meta charset="utf-8">
 	<title>Julien Pernot</title>
 	<meta name="description" content="Site vitrine">
 	<meta name="author" content="Julien Pernot">
 
 	<!-- Mobile Specific Metas
-  ================================================== -->
+	================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- CSS
-  ================================================== -->
+	================================================== -->
   	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
   	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="stylesheets/base.css">
@@ -488,98 +488,43 @@
 
 	<!-- JS
 	================================================== -->
-	<script type="text/javascript" src="javascripts/jquery.js"></script>
-	<script type="text/javascript" src="javascripts/google-api.js"></script>
-	<script type="text/javascript" src="javascripts/jquery.sticky.js"></script>
-	<script type="text/javascript" src="javascripts/nbw-parallax.js"></script>
-	<script type="text/javascript" src="javascripts/jquery.inview.js"></script>
-	<script type="text/javascript" src="javascripts/smooth-scroll.js"></script>
-	<script type="text/javascript" src="javascripts/jquery.flexslider.js"></script>
-	<script type="text/javascript" src="javascripts/jquery.prettyPhoto.js"></script>
-	<script type="text/javascript" src="javascripts/contactform.js"></script>
-	
-	<!-- Sticky nav -->
-	<script type="text/javascript" charset="utf-8">
-		$(document).ready(function(){
-			$("nav").sticky({topSpacing:0});
-		});
-	</script>
-	
-	
-	<!-- dropdown menu -->
-	<script type="text/javascript" charset="utf-8">
-    	function scrollTo(target){
-        	var targetPosition = $(target).offset().top;
-        	$('html,body').animate({ scrollTop: targetPosition}, 'slow');
-        }
-    </script>
-	
-	
-	
-	<!-- slider -->
-	<script type="text/javascript" charset="utf-8">
-		$(window).load(function() {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				slideshow: true,
-				slideshowSpeed: 4500,
-				animationSpeed: 1000
-			});
-		});
-	</script>
-	
-	<script type="text/javascript" charset="utf-8">
-		$(document).ready(function(){
-			$("a[rel^='prettyPhoto']").prettyPhoto({
-				social_tools: false,
-				theme: 'light_square'
-			});
-		});
-	</script>
-	
-	<!-- Google Map -->
-	<script type="text/javascript" charset="utf-8">
-	var map;
-	var home = new google.maps.LatLng(43.6049937, 1.4441059);
 
-	function initialize() {
-		var mapOptions = {
-			zoom: 17,
-			center: home,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
+	<script type="text/javascript" charset="utf-8">
+	function getScript(url, success){
+		var script = document.createElement('script');
+		script.src = url;
+		var head = document.getElementsByTagName('head')[0], done=false;
+		script.onload=script.onreadystatechange = function(){
+			if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+				done = true;
+				if (typeof success === "function")
+					success.call(url);
+				script.onload = script.onreadystatechange = null;
+				head.removeChild(script);
+			}
 		};
-		
-		map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-		
-		marker = new google.maps.Marker({
-			position: home,
-			map: map,
-			animation: google.maps.Animation.DROP,
-			title: 'Maison'
-		});
-		
-		marker.setAnimation(google.maps.Animation.BOUNCE);
-		
-		var contentString = '<br /><br /><h3>Bienvenue chez moi !</h3>' +
-							'<br/><p>3 rue Lafayette<br />31000 Toulouse</p>';
-							
-		var infowindow = new google.maps.InfoWindow({
-			content: contentString
-		});
-		
-		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.open(map, marker);
-			marker.setAnimation(null);
-		});
-		
-		google.maps.event.addListener(infowindow, 'closeclick', function(){
-			marker.setAnimation(google.maps.Animation.BOUNCE);
-		});
+		head.appendChild(script);
 	}
+	
+	var scripts = [
+		"javascripts/google-map.js",
+		"javascripts/jquery.sticky.js",
+		"javascripts/nbw-parallax.js",
+		"javascripts/jquery.inview.js",
+		"javascripts/smooth-scroll.js",
+		"javascripts/jquery.flexslider.js",
+		"javascripts/jquery.prettyPhoto.js",
+		"javascripts/contactform.js",
+		"javascripts/main.js"
+	];
+	
+	getScript("javascripts/jquery.js", function(){
+		for(var script in scripts){
+			getScript(scripts[script]);
+		}	
+	});
 
-	google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
-
 
 <!-- End Document
 ================================================== -->
