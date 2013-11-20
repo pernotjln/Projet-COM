@@ -30,12 +30,12 @@ $(document).ready(function() { //when the document is ready...
 	
 	//apply the class "inview" to a section that is in the viewport
 	$('#intro, #separator1, #separator2, #separator3').bind('inview', function (event, visible) {
-			if (visible == true) {
-				$(this).addClass("inview");
-			} else {
-				$(this).removeClass("inview");
-			}
-		});
+		if (visible == true) {
+			$(this).addClass("inview");
+		} else {
+			$(this).removeClass("inview");
+		}
+	});
 	
 			
 	//function that places the navigation in the center of the window

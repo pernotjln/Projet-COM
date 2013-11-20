@@ -509,7 +509,6 @@
 	var scripts = [
 		"javascripts/google-map.js",
 		"javascripts/jquery.sticky.js",
-		"javascripts/nbw-parallax.js",
 		"javascripts/jquery.inview.js",
 		"javascripts/smooth-scroll.js",
 		"javascripts/jquery.flexslider.js",
@@ -519,9 +518,11 @@
 	];
 	
 	getScript("javascripts/jquery.js", function(){
-		for(var script in scripts){
-			getScript(scripts[script]);
-		}	
+		getScript("javascripts/nbw-parallax.js", function(){
+			for(var script in scripts){
+				getScript(scripts[script]);
+			}
+		});
 	});
 
 	</script>
