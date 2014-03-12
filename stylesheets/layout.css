@@ -645,23 +645,13 @@ p.t-type {
 	margin-bottom: 2px;
 }
 
-
-.contact-info {
+.espace {
 	margin-top: 50px;
-}
-
-.contact-info h5 {
-	margin-bottom: 40px;
 }
 
 .contact-info img {
 	vertical-align: middle;
 	margin-right: 10px;
-}
-
-
-.social {
-	padding-top: 15px;
 }
 
 .social ul li {
@@ -673,6 +663,33 @@ p.t-type {
 	opacity: 0.7;
 }
 
+.cv {
+	margin-bottom: 20px;
+}
+
+.cv a {
+	color: #f9f9f9;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.cv img {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.cv a:hover {
+	opacity: 0.7;
+}
+
+.cv, .contact-info, .social {
+	padding-left: 20px;
+}
+
+.espace hr{
+	margin: 10px 0 20px;
+	color: #f9f9f9;
+}
 
 .copyright {
 	border-top: 1px solid #858585;

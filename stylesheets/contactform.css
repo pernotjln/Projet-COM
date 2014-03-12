@@ -79,7 +79,6 @@
 	margin-right: 2px;
 }
 
-
 .cfg-label {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: normal;
@@ -102,6 +101,9 @@
 	background: url('../images/cont-form-bg.jpg') repeat;
 }
 
+.cfg-element-content textarea {
+	resize: vertical;
+}
 
 #cfg-element-4-37-label {
 	font-family: 'Source Sans Pro', sans-serif;
