@@ -680,6 +680,7 @@ p.t-type {
 
 .cv a:hover {
 	opacity: 0.7;
+	text-decoration: underline;
 }
 
 .cv, .contact-info, .social {
