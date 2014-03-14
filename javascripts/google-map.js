@@ -1,4 +1,4 @@
-var map;
+﻿var map;
 
 function initialize() {
 	var home = new google.maps.LatLng(43.6049937, 1.4441059);
@@ -19,7 +19,7 @@ function initialize() {
 	
 	marker.setAnimation(google.maps.Animation.BOUNCE);
 	
-	var contentString = '<br /><br /><h3>Bienvenue chez moi !</h3>' +
+	var contentString = '<br /><br /><h3>Merci d\'avoir cliqué !</h3>' +
 						'<br/><p>3 rue Lafayette<br />31000 Toulouse</p>';
 						
 	var infowindow = new google.maps.InfoWindow({
